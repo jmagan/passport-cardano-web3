@@ -1,0 +1,53 @@
+{
+  "name": "passport-cardano-web3",
+  "version": "1.0.1",
+  "description": "Cardano web3 authentication for Passport.",
+  "type": "commonjs",
+  "keywords": [
+    "passport",
+    "cardano",
+    "web3",
+    "dapp",
+    "auth",
+    "authn",
+    "authentication"
+  ],
+  "author": "Juan Salvador Magán Valero <jmaganvalero@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmagan/passport-cardano-web3"
+  },
+  "bugs": {
+    "url": "https://github.com/jmagan/passport-cardano-web3/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "./lib",
+  "dependencies": {
+    "@emurgo/cardano-message-signing-nodejs": "^1.0.1",
+    "@emurgo/cardano-serialization-lib-nodejs": "^11.2.1",
+    "passport-strategy": "^1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-passport-strategy": "^3.0.0",
+    "eslint": "^8.31.0",
+    "mocha": "^10.2.0"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec --require test/bootstrap/node test/*.test.js"
+  },
+  "homepage": "https://github.com/jmagan",
+  "directories": {
+    "test": "test"
+  },
+  "license": "MIT",
+  "typings": "./lib/index.d.ts"
+}
