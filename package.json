@@ -1,6 +1,6 @@
 {
   "name": "passport-cardano-web3",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Cardano web3 authentication for Passport.",
   "type": "commonjs",
   "keywords": [
