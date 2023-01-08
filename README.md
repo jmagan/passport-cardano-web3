@@ -8,7 +8,7 @@
 This module lets you authenticate using a Cardano wallet in your Node.js applications. 
 ## Install
 
-    $ npm install passport-custom
+    $ npm install passport-cardano-web3
 
 ## Usage
 
