@@ -30,6 +30,7 @@
   "dependencies": {
     "@emurgo/cardano-message-signing-nodejs": "^1.0.1",
     "@emurgo/cardano-serialization-lib-nodejs": "^11.2.1",
+    "@types/passport": "^1.0.11",
     "passport-strategy": "^1.0.0"
   },
   "devDependencies": {
