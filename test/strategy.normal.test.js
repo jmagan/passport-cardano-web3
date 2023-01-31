@@ -31,6 +31,7 @@ describe('Strategy success', function () {
     chai.passport
       .use(strategy)
       .request(function (req) {
+        req.url = '/users/profile';
         req.baseUrl = '/users';
         req.path = '/profile';
         req.body = {};
@@ -69,6 +70,7 @@ describe('Strategy success', function () {
       .use(strategy)
       .request(function (req) {
         req.body = {};
+        req.url = '/users/profile';
         req.baseUrl = '/users';
         req.path = '/profile';
         req.body.key = Buffer.from(key.to_bytes()).toString('hex');
