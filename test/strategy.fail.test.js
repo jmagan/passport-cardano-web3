@@ -67,6 +67,7 @@ describe('Strategy fail', function () {
     chai.passport
       .use(strategy)
       .request(function (req) {
+        req.url = '/users/profile';
         req.baseUrl = '/users';
         req.path = '/profile';
         req.body = {};
@@ -104,6 +105,7 @@ describe('Strategy fail', function () {
     chai.passport
       .use(strategy)
       .request(function (req) {
+        req.url = '/users/profile';
         req.baseUrl = '/users';
         req.path = '/profile';
         req.body = {};
@@ -144,6 +146,7 @@ describe('Strategy fail', function () {
     chai.passport
       .use(strategy)
       .request(function (req) {
+        req.url = '/users/profile';
         req.baseUrl = '/users';
         req.path = '/profile';
         req.body = {};
@@ -182,6 +185,7 @@ describe('Strategy fail', function () {
     chai.passport
       .use(strategy)
       .request(function (req) {
+        req.url = '/users/profile';
         req.baseUrl = '/users';
         req.path = '/profile';
         req.body = {};
