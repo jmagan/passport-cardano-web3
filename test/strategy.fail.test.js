@@ -23,6 +23,8 @@ describe('Strategy fail', function () {
     var key = createCOSEKey(privateKey);
     var signature = createCOSESign1Signature(
       {
+        action: 'dummy action',
+        url: 'dummy url',
         timestamp: Date.now() - 10 * 1000 - 1,
       },
       address,
@@ -41,7 +43,7 @@ describe('Strategy fail', function () {
         expect(status).to.be.equals(401);
         done();
       })
-      .authenticate({action: 'Test'});
+      .authenticate({ action: 'Test' });
   });
 
   it('should NOT validate if the action doesn\'t match', function (done) {
@@ -58,7 +60,7 @@ describe('Strategy fail', function () {
       {
         timestamp: Date.now(),
         url: 'https://example2.com/profile',
-        action: 'Test2'
+        action: 'Test2',
       },
       address,
       privateKey
@@ -79,7 +81,7 @@ describe('Strategy fail', function () {
         expect(status).to.be.equals(401);
         done();
       })
-      .authenticate({action: 'Test'});
+      .authenticate({ action: 'Test' });
   });
 
   it('should NOT validate if the url doesn\'t match', function (done) {
@@ -96,7 +98,7 @@ describe('Strategy fail', function () {
       {
         timestamp: Date.now(),
         url: 'https://example2.com/profile',
-        action: 'Test'
+        action: 'Test',
       },
       address,
       privateKey
@@ -117,10 +119,8 @@ describe('Strategy fail', function () {
         expect(status).to.be.equals(401);
         done();
       })
-      .authenticate({action: 'Test'});
+      .authenticate({ action: 'Test' });
   });
-
-  
 
   it('should NOT validate if the signature is invalid', function (done) {
     var strategy = new Strategy({
@@ -137,7 +137,7 @@ describe('Strategy fail', function () {
       {
         timestamp: Date.now(),
         url: 'https://example.com/users/profile',
-        action: 'Test'
+        action: 'Test',
       },
       address,
       privateKey
@@ -158,7 +158,7 @@ describe('Strategy fail', function () {
         expect(status).to.be.equals(401);
         done();
       })
-      .authenticate({action: 'Test'});
+      .authenticate({ action: 'Test' });
   });
 
   it('should NOT validate if the address doesn\'t match with the public key', function (done) {
@@ -176,7 +176,7 @@ describe('Strategy fail', function () {
       {
         timestamp: Date.now(),
         url: 'https://example.com/users/profile',
-        action: 'Test'
+        action: 'Test',
       },
       otherAddress,
       privateKey
@@ -199,6 +199,6 @@ describe('Strategy fail', function () {
         expect(status).to.be.equals(401);
         done();
       })
-      .authenticate({action: 'Test'});
+      .authenticate({ action: 'Test' });
   });
 });

@@ -1,19 +1,20 @@
-import { Strategy as PassportStrategy } from 'passport-strategy';
-import { Request } from 'express';
-import { AuthenticateOptions } from 'passport'
+import { Strategy as PassportStrategy } from "passport-strategy";
+import passport from "passport";
+
 
 export type CardanoWeb3StrategyOptions = {
-    expirationTimeSpan: Number,
-    hostname: String
-}
-
-export type CardanoWeb3AuthenticateOptions = {
-    action: String
-} & AuthenticateOptions
+  expirationTimeSpan: Number;
+  hostname: String;
+};
 
 export declare class Strategy extends PassportStrategy {
-    constructor(options: CardanoWeb3StrategyOptions);
-    authenticate(req: Request, options?: CardanoWeb3AuthenticateOptions): any;
+  constructor(options: CardanoWeb3StrategyOptions);
 }
 
+declare namespace CardanoWeb3Strategy {
+    interface AuthenticateOptions extends passport.AuthenticateOptions{
+        action?: string | undefined;
+      }
+}
 
+export = CardanoWeb3Strategy

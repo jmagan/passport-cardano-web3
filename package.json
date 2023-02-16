@@ -1,6 +1,6 @@
 {
   "name": "passport-cardano-web3",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Cardano web3 authentication for Passport.",
   "type": "commonjs",
   "keywords": [
@@ -31,6 +31,7 @@
     "@emurgo/cardano-message-signing-nodejs": "^1.0.1",
     "@emurgo/cardano-serialization-lib-nodejs": "^11.2.1",
     "@types/passport": "^1.0.11",
+    "cardano-web3-utils": "^1.0.1",
     "passport-strategy": "^1.0.0"
   },
   "devDependencies": {

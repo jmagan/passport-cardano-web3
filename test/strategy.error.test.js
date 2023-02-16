@@ -74,7 +74,7 @@ describe('Strategy error', function () {
         })
         .error(function (err) {
           expect(err).to.be.an.instanceof(Error);
-          expect(err.message).to.be.equals('Invalid or missing timestamp');
+          expect(err.message).to.be.equals('Invalid payload');
           done();
         })
         .authenticate({ action: 'Test' });
