@@ -10,7 +10,10 @@
     "dapp",
     "auth",
     "authn",
-    "authentication"
+    "authentication",
+    "CIP",
+    "93",
+    "CIP-0093"
   ],
   "author": "Juan Salvador Magán Valero <jmaganvalero@gmail.com>",
   "repository": {
@@ -31,7 +34,7 @@
     "@emurgo/cardano-message-signing-nodejs": "^1.0.1",
     "@emurgo/cardano-serialization-lib-nodejs": "^11.2.1",
     "@types/passport": "^1.0.11",
-    "cardano-web3-utils": "^1.0.1",
+    "cardano-web3-utils": "^2.0.0",
     "passport-strategy": "^1.0.0"
   },
   "devDependencies": {

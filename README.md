@@ -5,7 +5,7 @@
 
 [Passport](http://passportjs.org/) strategy for authenticating with Cardano wallet signatures.
 
-This module lets you authenticate using a Cardano wallet in your Node.js applications. 
+This module lets you authenticate using a Cardano wallet in your Node.js applications. This implementation is based on CIP-0093 Authenticated Web3 HTTP Requests. 
 ## Install
 
     $ npm install passport-cardano-web3
@@ -46,7 +46,7 @@ In the client side, we will use the ```api.signData(addr: Address, payload: Byte
 
 ```javascript
 const payload = {
-        url: 'https://example.com/login',
+        uri: 'https://example.com/login',
         action: 'Login',
         timestamp: Date.now(),
       };
@@ -72,6 +72,12 @@ The repository [jmagan/cardano-express-web3-skeleton](https://github.com/jmagan/
 
     $ npm install
     $ npm test
+
+## Support
+
+If you find it useful, please consider inviting me a coffee :)
+
+[![DoItWithLovelace](https://app.doitwithlovelace.io/api/og/assets/donationButton)](https://app.doitwithlovelace.io/users/DoItWithLovelace)
 
 ## License
 

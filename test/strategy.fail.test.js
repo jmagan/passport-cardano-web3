@@ -24,7 +24,7 @@ describe('Strategy fail', function () {
     var signature = createCOSESign1Signature(
       {
         action: 'dummy action',
-        url: 'dummy url',
+        uri: 'dummy uri',
         timestamp: Date.now() - 10 * 1000 - 1,
       },
       address,
@@ -59,7 +59,7 @@ describe('Strategy fail', function () {
     var signature = createCOSESign1Signature(
       {
         timestamp: Date.now(),
-        url: 'https://example2.com/profile',
+        uri: 'https://example2.com/profile',
         action: 'Test2',
       },
       address,
@@ -97,7 +97,7 @@ describe('Strategy fail', function () {
     var signature = createCOSESign1Signature(
       {
         timestamp: Date.now(),
-        url: 'https://example2.com/profile',
+        uri: 'https://example2.com/profile',
         action: 'Test',
       },
       address,
@@ -115,7 +115,7 @@ describe('Strategy fail', function () {
         req.body.signature = Buffer.from(signature.to_bytes()).toString('hex');
       })
       .fail(function (challenge, status) {
-        expect(challenge).to.be.equals('Invalid url');
+        expect(challenge).to.be.equals('Invalid uri');
         expect(status).to.be.equals(401);
         done();
       })
@@ -136,7 +136,7 @@ describe('Strategy fail', function () {
     var signature = createCOSESign1Signature(
       {
         timestamp: Date.now(),
-        url: 'https://example.com/users/profile',
+        uri: 'https://example.com/users/profile',
         action: 'Test',
       },
       address,
@@ -175,7 +175,7 @@ describe('Strategy fail', function () {
     var signature = createCOSESign1Signature(
       {
         timestamp: Date.now(),
-        url: 'https://example.com/users/profile',
+        uri: 'https://example.com/users/profile',
         action: 'Test',
       },
       otherAddress,

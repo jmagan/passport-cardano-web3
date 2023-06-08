@@ -23,7 +23,7 @@ describe('Strategy success', function () {
     var key = createCOSEKey(privateKey);
     var payload = {
       timestamp: Date.now(),
-      url: 'https://example.com/users/profile',
+      uri: 'https://example.com/users/profile',
       action: 'Test'
     };
     var signature = createCOSESign1Signature(payload, address, privateKey);
@@ -61,7 +61,7 @@ describe('Strategy success', function () {
     var key = createCOSEKey(privateKey);
     var payload = {
       timestamp: Date.now(),
-      url: 'https://example.com/users/profile',
+      uri: 'https://example.com/users/profile',
       action: 'Test'
     };
     var signature = createCOSESign1Signature(payload, address, privateKey);
